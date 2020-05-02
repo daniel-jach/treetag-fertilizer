@@ -97,7 +97,7 @@ Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at
 Contributors
 ------------
 
-Daniel Jach &lt;danieljach@protonmail.com<br>
+Daniel Jach &lt;danieljach@protonmail.com&gt;
 
 License and Copyright
 ---------------------

@@ -59,7 +59,7 @@ Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In
 
 ## Contributors  
 
-Daniel Jach <danieljach\@protonmail.com<br>
+Daniel Jach <danieljach\@protonmail.com>
 
 ## License and Copyright  
 
