@@ -2,7 +2,6 @@
 title: "R function *treetag.fertilizer*"
 output: github_document
 bibliography: treetag-fertilizer.bib
-link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
