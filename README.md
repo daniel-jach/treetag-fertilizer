@@ -94,4 +94,14 @@ References
 
 Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at <https://cran.r-project.org/web/packages/koRpus/index.html>, February 22, 2020.<br> Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. Available online at <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>, February 22, 2020.
 
-**Author** Daniel Jach<br> **Contact** danieljach@protonmail.com<br> **Published** February 2020
+Contributors
+------------
+
+Daniel Jach &lt;danieljach@protonmail.com<br>
+
+License and Copyright
+---------------------
+
+© Daniel Jach, University of Zhengzhou, China
+
+Licensed under the [MIT License](LICENSE).
