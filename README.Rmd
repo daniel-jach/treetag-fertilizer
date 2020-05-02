@@ -1,0 +1,62 @@
+---
+title: "R function *treetag.fertilizer*"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Description
+
+The R function *treetag.fertilizer* calls a local installation of *TreeTagger* (Schmid, 1994) and identifies sentences in the parsed corpus. The output is a dataframe with tokens in rows and annotations in columns.
+
+## Usage
+
+treetag.fertilizer(pathToTreetagger, pathToCorpus, language, sentence_delim = c("!", "?", ".", ":", ";"))
+
+## Arguments  
+
+ | 
+ ---------|----------------------------------------------------------------------------------------------------
+pathToTreeTagger | Character string specifying the path to the local installation of TreeTagger, e.g., "/home/user/TreeTagger/"
+pathToCorpus | Character string specifying the path to the corpus files, e.g., "./data/"
+language |	Character string naming the language of the corpus, e.g., "english" or "german"
+sentence_delim |	Character vector with tokens specifying sentence delimiters
+
+## Details  
+
+Note that the function calls *TreeTagger* with default configuration and has no options to change that. The language argument specifies the language-specific tagging script that *TreeTagger* uses to parse the corpus. The language label should match the last part of the respective file name (e.g., *tree-tagger-german* for parsing German-language data). The function uses !?.:; as sentence delimiters by default. Enter a character vector with different elements to change sentence delimiters.
+
+## Comparison to *treetag* in the *koRpus* package  
+
+The function is similar to the function *treetag* in the *koRpus* package (Michalke, 2018), however, much faster. *TreeTagger* itself is very quick but sentence identification with *treetag* is slow and slows down with increasing corpus size. *treetag.fertilizer* speeds up sentence identification and is much less affected by corpus size (see Figure below) while using the most simplistic approach you have ever seen (see R code below).
+
+```{r plot, echo=FALSE}
+
+df<-readRDS("./data.Rda")
+
+df<-df[-c(1:9, 11:19, 25:33, 35:43),]
+fertil<-df[1:6,]
+koRpus<-df[7:12,]
+
+plot(koRpus$TIME ~ koRpus$SIZE, type = "b", col = "blue", ylab = "Time elapsed in seconds", xlab = "Corpus size in number of sentences")
+lines(fertil$TIME ~ fertil$SIZE, type = "b", col = "green")
+legend(5000, 200, legend=c("treetag{koRpus}", "treetag.fertilizer"),
+       col=c("blue", "green"), lty=1, cex=1, pch = 1, box.lty=0)
+
+```
+
+## R code  
+
+```{r, code = readLines("fcn_treetag-fertilizer.R")}
+```
+
+## References  
+
+Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at https://cran.r-project.org/web/packages/koRpus/index.html, February 22, 2020.
+Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. Available online at http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/, February 22, 2020. 
+
+**Author** Daniel Jach<br>
+**Contact** danieljach\@protonmail.com<br>
+**Published** February 2020
