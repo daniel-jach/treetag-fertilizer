@@ -92,6 +92,6 @@ treetag.fertilizer<-function(pathToTreeTagger, pathToCorpus, language, sentence_
 References
 ----------
 
-Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at <https://cran.r-project.org/web/packages/koRpus/index.html>, February 22, 2020. Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. Available online at <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>, February 22, 2020.
+Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at <https://cran.r-project.org/web/packages/koRpus/index.html>, February 22, 2020.<br> Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. Available online at <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>, February 22, 2020.
 
 **Author** Daniel Jach<br> **Contact** danieljach@protonmail.com<br> **Published** February 2020
