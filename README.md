@@ -4,7 +4,7 @@ R function *treetag.fertilizer*
 Description
 -----------
 
-The R function *treetag.fertilizer* calls a local installation of *TreeTagger* (Schmid [1994](#ref-Schmid.1994)) and identifies sentences in the parsed corpus. The output is a dataframe with tokens in rows and annotations in columns.
+The R function *treetag.fertilizer* calls a local installation of *TreeTagger* (Schmid 1994) and identifies sentences in the parsed corpus. The output is a dataframe with tokens in rows and annotations in columns.
 
 Usage
 -----
@@ -47,7 +47,7 @@ Note that the function calls *TreeTagger* with default configuration and has no 
 Comparison to *treetag* in the *koRpus* package
 -----------------------------------------------
 
-The function is similar to the function *treetag* in the *koRpus* package (Michalke [2018](#ref-Michalke.2018)), however, much faster. *TreeTagger* itself is very quick but sentence identification with *treetag* is slow and slows down with increasing corpus size. *treetag.fertilizer* speeds up sentence identification and is much less affected by corpus size (see Figure below) while using the most simplistic approach you have ever seen (see R code below).
+The function is similar to the function *treetag* in the *koRpus* package (Michalke 2018), however, much faster. *TreeTagger* itself is very quick but sentence identification with *treetag* is slow and slows down with increasing corpus size. *treetag.fertilizer* speeds up sentence identification and is much less affected by corpus size (see Figure below) while using the most simplistic approach you have ever seen (see R code below).
 
 ![](README_files/figure-markdown_github/plot-1.png)
 
