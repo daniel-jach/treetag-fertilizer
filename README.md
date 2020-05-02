@@ -4,7 +4,7 @@ R function *treetag.fertilizer*
 Description
 -----------
 
-The R function *treetag.fertilizer* calls a local installation of *TreeTagger* (Schmid, 1994) and identifies sentences in the parsed corpus. The output is a dataframe with tokens in rows and annotations in columns.
+The R function *treetag.fertilizer* calls a local installation of *TreeTagger* (Schmid [1994](#ref-Schmid.1994)) and identifies sentences in the parsed corpus. The output is a dataframe with tokens in rows and annotations in columns.
 
 Usage
 -----
@@ -47,7 +47,7 @@ Note that the function calls *TreeTagger* with default configuration and has no 
 Comparison to *treetag* in the *koRpus* package
 -----------------------------------------------
 
-The function is similar to the function *treetag* in the *koRpus* package (Michalke, 2018), however, much faster. *TreeTagger* itself is very quick but sentence identification with *treetag* is slow and slows down with increasing corpus size. *treetag.fertilizer* speeds up sentence identification and is much less affected by corpus size (see Figure below) while using the most simplistic approach you have ever seen (see R code below).
+The function is similar to the function *treetag* in the *koRpus* package (Michalke [2018](#ref-Michalke.2018)), however, much faster. *TreeTagger* itself is very quick but sentence identification with *treetag* is slow and slows down with increasing corpus size. *treetag.fertilizer* speeds up sentence identification and is much less affected by corpus size (see Figure below) while using the most simplistic approach you have ever seen (see R code below).
 
 ![](README_files/figure-markdown_github/plot-1.png)
 
@@ -89,13 +89,8 @@ treetag.fertilizer<-function(pathToTreeTagger, pathToCorpus, language, sentence_
 }
 ```
 
-References
-----------
-
-Michalke, M. (2018). koRpus: An R Package for Text Analysis. Available online at <https://cran.r-project.org/web/packages/koRpus/index.html>, February 22, 2020.<br> Schmid, H. (1994). Probabilistic Part-of-Speech Tagging Using Decision Trees. In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. Available online at <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>, February 22, 2020.
-
-Contributors
-------------
+Author
+------
 
 Daniel Jach &lt;danieljach@protonmail.com&gt;
 
@@ -105,3 +100,10 @@ License and Copyright
 © Daniel Jach, University of Zhengzhou, China
 
 Licensed under the [MIT License](LICENSE).
+
+References
+----------
+
+Michalke, Meik. 2018. *KoRpus: An R Package for Text Analysis*. <https://reaktanz.de/?c=hacking&s=koRpus>.
+
+Schmid, Helmut. 1994. “Probabilistic Part-of-Speech Tagging Using Decision Trees.” In *Proceedings of International Conference on New Methods in Language Processing*. Manchester, England. <http://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/>.
