@@ -69,6 +69,10 @@ treetag.fertilizer<-function(pathToTreeTagger, pathToCorpus, language, sentence_
   # set column names
   colnames(corpus)<-c("TOKEN", "POS", "LEMMA") 
   
+  # if corpus files does not end on sentence delimiter...
+  if(!(corpus$TOKEN[nrow(corpus)] %in% sentence_delim)){ 
+    corpus<-rbind(corpus, c(".", "$.", ".")) # ...add full stop at end of corpus file
+  }
   # find position of sentence boundaries
   x<-which(corpus$TOKEN %in% sentence_delim) 
   
